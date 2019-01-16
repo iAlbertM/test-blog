@@ -7,7 +7,6 @@
 body {
     color: #555;
     margin: 0;
-
     font-family: 'Montserrat', sans-serif;
  }
 
@@ -42,13 +41,6 @@ header > .content {
 	margin: 0 auto;
 }
 
-/* header flex-items */
-/* #header-title,
-nav,
-nav ul li {
-    flex: 1 0 auto;
-} */
-
 /* LINKS */
 a {
 	color: #1abc9c;
@@ -79,11 +71,12 @@ header a:hover {
 
 footer {
 	background-color: #2f2f2f;
-	padding: 50px 0;
+  width: 100%;
+	padding: 0 5%;
 }
 
 .column {
-	max-width:  300px;
+	min-width:  300px;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -96,16 +89,9 @@ footer h4 {
 
 footer p {
 	color:  white;
+  font-weight: 400;
 }
 
-footer a[href~="twitter"] {
-	background: url('img/icons/icon-twitter.png') no-repeat;
-	background-size: contain;
-}
-
-footer a[href~="twitter"]:hover {
-	opacity: 0.5;
-}
 
 /* -----
  POST
@@ -114,15 +100,21 @@ footer a[href~="twitter"]:hover {
 .post, .about {
 	max-width: 800px;
 	margin: 0 auto;
-	padding:  60px 0;
+	padding: 60px 0;
 }
 
-#content >div> .post:even  { background: gold; }
-/* #content >.container>.post { background: white; } */
-
-img {
-  border-radius: 100px;
+.post-container:nth-child(even) {
+  background-color: #f2f2f2;
 }
+
+.about {
+  text-align:  center;
+}
+
+.post img, .about img {
+  border-radius: 50%;
+}
+
 .post-author img {
 	width: 50px;
 	height: 50px;
