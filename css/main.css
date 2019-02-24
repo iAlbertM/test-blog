@@ -1,4 +1,7 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat:400,700);');
+:root {
+  font-size: 16px;
+}
 
 * {
     box-sizing: border-box;
@@ -20,7 +23,7 @@ header {
 #header-title {
   display: block;
   float:  left;
-  font-size: 20px;
+  font-size: 1.25rem;/*20px/16px*/
   font-weight: bold;
   /* margin-top: 0; */
 }
@@ -39,6 +42,8 @@ header nav li {
 header > .content {
 	max-width: 1000px;
 	margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /* LINKS */
@@ -51,9 +56,7 @@ a:hover {
 	color: #f6a623;
 }
 
- header a, header a:link {
-    /* display: block; */
-    /* font-size: 1em; */
+ header a, header a:link {        
     text-decoration: none;
     color: white;
     font-weight: 400;
@@ -94,7 +97,7 @@ footer p {
 
 
 /* -----
- POST
+ POSTS
 ----- */
 
 .post, .about {
@@ -128,11 +131,12 @@ footer p {
 .post-date {
 	color: #d2d2d2;
 
-	font-size: 14px;
+	font-size: 0.875rem; /*14px/16px*/
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
+
 h1,h2,h3,h4 {
 	color: #333;
 }
@@ -143,18 +147,52 @@ p {
 
 
 /* Medium screens */
-/* @media all and (max-width: 800px) {
-    header nav ul {
-        When on medium sized screens, we center it by evenly distributing empty space around items
+@media all and (max-width: 885px) {
+  header nav ul {
+        /* When on medium sized screens, we center it by evenly distributing empty space around items */
         justify-content: space-around;
         flex-flow: row wrap;
-    }
-} */
+  }
+
+  #content {
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+
+  body {
+    font-size: 0.875rem; /*14px/16*/
+  }
+ 
+  #header-title {
+    font-size: 1.5rem; 
+  }
+
+  .post-date {
+    font-size: 0.75rem; /*12px/16px*/
+  }
+
+
+}
 
 /* Small screens */
-/* @media all and (max-width: 500px) {
+@media all and (max-width: 500px) {
     header nav ul {
-        On small screens, we are no longer using row direction but column
+        /* On small screens, use column dir. for mobile devices lack of width */
         flex-direction: column;
     }
-} */
+    .post-title {
+      font-size: 1.75rem;
+      line-height: 0.9;
+    }
+  
+  .post-content {       
+      line-height: 1.75;
+      font-size: 1.125rem;
+      font-weight: 200;
+    }
+    
+    .post, .about {
+      max-width: 500px;
+      padding: 60px 5%;
+    }
+}
