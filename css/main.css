@@ -173,23 +173,38 @@ p {
 
 
 }
-
 /* Small screens */
 @media all and (max-width: 500px) {
-    header nav ul {
-        /* On small screens, use column dir. for mobile devices lack of width */
-        flex-direction: column;
-    }
-    .post-title {
-      font-size: 1.75rem;
-      line-height: 0.9;
-    }
   
+  #header-title, header nav {
+    float: none;
+    clear: both;
+  }
+
+  header nav li {
+    display: inline-block;
+  }
+   
+  .post-author span {
+    font-size: 1rem;
+  }
+  
+  .post-title {
+    font-size: 1.75rem;
+    margin: 0.675em 0;
+  }
+
+  .post-date {
+    font-size: 1rem; /*14px/16px*/
+    letter-spacing: 0.1em;
+
+  }
+ 
   .post-content {       
-      line-height: 1.75;
-      font-size: 1.125rem;
-      font-weight: 200;
-    }
+    line-height: 1.75;
+    font-size: 1.175rem;
+    font-weight: 200;
+  }
     
     .post, .about {
       max-width: 500px;
